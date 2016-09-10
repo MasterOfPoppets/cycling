@@ -30,6 +30,13 @@ const JouxPlane = graphql(MyQuery, {
   }),
 })(Col);
 
+const Roselend = graphql(MyQuery, {
+  props: ({ data: { loading, cols } }) => ({
+    loading,
+    col: cols ? cols[2] : null,
+  }),
+})(Col);
+
 class App extends Component {
   render() {
     return (
@@ -43,6 +50,7 @@ class App extends Component {
         </p>
         <Sanetsch division={30} height={350} width={750} />
         <JouxPlane division={15} height={200} width={345} />
+        <Roselend division={30} height={250} width={700} />
       </div>
     );
   }

@@ -7,7 +7,7 @@ import App from './App';
 import './index.css';
 
 const client = new ApolloClient({
-  networkInterface: createNetworkInterface('https://site-backend-fchhixnbhh.now.sh/graphql'),
+  networkInterface: createNetworkInterface('https://site-backend-qvlphxerdg.now.sh/graphql'),
 });
 
 ReactDOM.render(
